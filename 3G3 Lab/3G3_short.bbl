@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{willmore_2001_characterizing}
+B.~Willmore and D.~Tolhurst, ``Characterizing the sparseness of neural codes,''
+  {\em Network: Computation in Neural Systems}, vol.~12, pp.~255--270, 01 2001.
+
+\bibitem{olshausen_2004_sparse}
+B.~Olshuasen and D.~Field, ``Sparse coding of sensory inputs,'' {\em Current
+  Opinion in Neurobiology}, vol.~14, pp.~481--487, 08 2004.
+
+\bibitem{field_1994_what}
+D.~J. Field, ``What is the goal of sensory coding?,'' {\em Neural Computation},
+  vol.~6, pp.~559--601, 07 1994.
+
+\bibitem{zhu_2023_statistics}
+S.-C. Zhu and Y.~N. Wu, ``Statistics of natural images,'' {\em Springer
+  eBooks}, pp.~19--35, 01 2023.
+
+\bibitem{lennie_2003_receptive}
+P.~Lennie, ``Receptive fields,'' {\em Current Biology}, vol.~13,
+  pp.~R216--R219, 2003.
+
+\bibitem{dodds_2019_spatial}
+E.~M. Dodds, J.~A. Livezey, and M.~R. DeWeese, ``Spatial whitening in the
+  retina may be necessary for v1 to learn a sparse representation of natural
+  scenes,'' {\em bioRxiv (Cold Spring Harbor Laboratory)}, 09 2019.
+
+\bibitem{olshausen_1997_sparse}
+B.~A. Olshausen and D.~J. Field, ``Sparse coding with an overcomplete basis
+  set: A strategy employed by v1?,'' {\em Vision Research}, vol.~37,
+  pp.~3311--3325, 12 1997.
+
+\end{thebibliography}
