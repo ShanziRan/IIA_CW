@@ -9,6 +9,7 @@
 \usepackage{textcomp}
 \usepackage{amstext, amsmath}
 \usepackage{graphicx}
+\graphicspath{{figures/}}
 
 \makeatletter
 
@@ -24,27 +25,16 @@
 \title{3F8: Inference\\
  Short Lab Report}
 
-\author{Author's Name}
+\author{Shanzi (Monica) Ran}
 \maketitle
 \begin{abstract}
-This is the abstract. 
-
-Try for 1-2 sentences on each of: motive (what it\textquoteright s
-about), method (what was
-
-done), key results and conclusions (the main outcomes).
-
-\textbullet{} Don\textquoteright t exceed 3 sentences on any one.
-
-\textbullet{} Write this last, when you know what it should say!
+This lab report records investigations on performance of the logistic classifier and non-linear feature expansion mechanism (RBF). This is implemented using a simple binary categorised dataset, and the performance of classification models is assessed by the comparison of average log-likelihood between training and test data and error probabilities recorded by the confusion matrix. It has been shown in the exercise that while a simple linear classifier fails to capture complexity of the dataset, RBF-transformed input successfully resolves this issue by providing more flexible decision boundaries.
 \end{abstract}
 
 \section{Introduction}
-\begin{enumerate}
-\item What is the problem and why is it interesting?
-\item What novel follow-up will the rest of your report present?
-\end{enumerate}
-
+In the lab exercise recorded by this report, the properties of a simple logistic classifier is explored by applying it to a binary dataset, followed by investigation of metrics like average log-likelihood and confusion matrices.
+As classification is a fundamental task of machine learning, this investigation is necessary for the understanding of capabilities of different models and parameters.
+In this report, this classifier architecture is investigated both theoretically and practically, while non-linear feature expansion techniques are also explored as an alternative method to improve the classification performances.
 \section{Exercise a)\label{sec:Exercise-a}}
 
 In this exercise we have to consider the logistic classication model
@@ -99,11 +89,11 @@ Therefore, it is here set to the widely accepeted default value of $0.01$.
 In this exercise we visualise the dataset in the two-dimensional input
 space displaying each datapoint's class label. The dataset is visualised
 in Figure \ref{fig:data_visualisation}. By analising Figure \ref{fig:data_visualisation}
-we conclude that a linear classifier...
+we conclude that a linear classifier would not be able to perform the classification task satisfactorily due to the complex structure of the dataset. 
 
 \begin{figure}
 \begin{centering}
-% \includegraphics[width=0.3\paperwidth]{place_holder_figure}
+\includegraphics[width=0.3\paperwidth]{c.png}
 \par\end{centering}
 \caption{Visualisation of the data.\label{fig:data_visualisation} }
 \end{figure}
@@ -115,23 +105,26 @@ In this exercise we split the data randomly into training and test
 sets with 800 and 200 data points, respectively. The pseudocode from
 exercise a) is transformed into python code as follows:
 \begin{verbatim}
-#
-# Python code to be included
-#
+    sigmoid_value = predict(X_tilde_train, w)
+
+    gradient = X_tilde_train.T @ (y_train - sigmoid_value)
+
+    w = w + alpha * gradient
 \end{verbatim}
+
 We then train the classifier using this code. We fixed the learning
-rate parameter to be $\eta=...$ . The average log-likelihood on the
+rate parameter to be $\eta=0.001$ to inhibit oscillations. The average log-likelihood on the
 training and test sets as the optimisation proceeds are shown in Figure
 \ref{fig:learning_curves}. By looking at these plots we conclude
-that ...
+that for the given ratio of dataset split, the average log-likelihood value on the training dataset converges to a higher value than that of the test dataset. This difference is not large though, which is suspected to be the consequence of too much training data.
 
 Figure \ref{fig:learning_curves} displays the visualisation of the
 contours of the class predictive probabilities on top of the data.
-This figure shows that...
+This figure shows that the linear classifier model does not separate the categories clearly when applied to the original dataset. Therefore, alternative non-linear feature expansion methods like the RBF is explored in later sections of this report.
 
 \begin{figure}
 \begin{centering}
-% \includegraphics[width=0.3\paperwidth]{place_holder_figure}\hspace{1cm}\includegraphics[width=0.3\paperwidth]{place_holder_figure}
+\includegraphics[width=0.3\paperwidth]{d1.png}\hspace{1cm}\includegraphics[width=0.3\paperwidth]{d2.png}
 \par\end{centering}
 \caption{Learning curves showing the average log-likelihood on the training
 (left) and test (right) datasets.\label{fig:learning_curves} }
@@ -139,7 +132,7 @@ This figure shows that...
 
 \begin{figure}
 \begin{centering}
-% \includegraphics[width=0.3\paperwidth]{place_holder_figure}
+\includegraphics[width=0.3\paperwidth]{d3.png}
 \par\end{centering}
 \caption{Visualisation of the contours of the class predictive probabilities.\label{fig:data_visualisation-1} }
 \end{figure}
@@ -148,9 +141,9 @@ This figure shows that...
 \section{Exercise e)}
 
 The final average training and test log-likelihoods are shown in Table
-\ref{tab:average_ll}. These results indicate that... The 2x2 confusion
+\ref{tab:average_ll}. These results indicate that the classifier performs better with the training dataset than with the test dataset, which is reasonble result. The 2x2 confusion
 matrices on the and test set is shown in Table \ref{tab:confusion_test}.
-By analising this table, we conclude that...
+By analising this table, we conclude that  the probability of error for linear classification is approximately equal for the two classes, with an value $P_e \approx 0.28$ (taking average). This error probability agrees with expectation that pure linear classification is not sufficiently complex and accurate for the dataset used.
 
 \begin{table}
 \centering{}%
@@ -159,7 +152,7 @@ By analising this table, we conclude that...
 \begin{tabular}{c|c}
 \textbf{Avg. Train ll} & \textbf{Avg. Test ll}\tabularnewline
 \hline 
-- & -\tabularnewline
+$-0.627$ & $-0.609$\tabularnewline
 \hline 
 \end{tabular} 
 \par\end{center}
@@ -172,9 +165,9 @@ By analising this table, we conclude that...
  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$\hat{y}$} & \tabularnewline
  &  & 0 & 1\tabularnewline
 \cline{2-4} 
-$y$ & 0 & - & -\tabularnewline
+$y$ & 0 & $0.7075$ & $0.2925$\tabularnewline
 \cline{2-4} 
- & 1 & - & -\tabularnewline
+ & 1 & $0.2753$ & $0.7247$\tabularnewline
 \cline{2-4} 
 \end{tabular} 
 \par\end{center}
@@ -189,13 +182,14 @@ $y$ & 0 & - & -\tabularnewline
 We now expand the inputs through a set of Gaussian radial basis functions
 centred on the training datapoints. We consider widths $l=\{0.01,0.1,1\}$
 for the basis functions. We fix the learning rate parameter to be
-$\eta=\{...,...,...\}$ for each $l=\{0.01,0.1,1\}$, respectively.
+$\eta=\{0.01,0.01,0.0001\}$ for each $l=\{0.01,0.1,1\}$, respectively.
 Figure \ref{fig:contours_l} displays the visualisation of the contours
 of the resulting class predictive probabilities on top of the data
 for each choice of $l=\{0.01,0.1,1\}$.
+
 \begin{figure}
 \begin{centering}
-% \includegraphics[width=0.32\textwidth]{place_holder_figure}\hspace{0.15cm}\includegraphics[width=0.32\textwidth]{place_holder_figure}\hspace{0.15cm}\includegraphics[width=0.32\textwidth]{place_holder_figure}
+\includegraphics[width=0.32\textwidth]{g1.png}\hspace{0.15cm}\includegraphics[width=0.32\textwidth]{g2.png}\hspace{0.15cm}\includegraphics[width=0.32\textwidth]{g3.png}
 \par\end{centering}
 \caption{Visualisation of the contours of the class predictive probabilities
 for $l=0.01$ (left), $l=0.1$ (middle), $l=1$ (right).\label{fig:contours_l} }
@@ -207,11 +201,11 @@ for $l=0.01$ (left), $l=0.1$ (middle), $l=1$ (right).\label{fig:contours_l} }
 The final final training and test log-likelihoods per datapoint obtained
 for each setting of $l=\{0.01,0.1,1\}$ are shown in tables \ref{tab:avg_ll_l_001},
 \ref{tab:avg_ll_l_01} and \ref{tab:avg_ll_l_1}. These results indicate
-that... The 2 \texttimes{} 2 confusion matrices for the three models
+that as $l$ value increases, the classifier performance on training dataset gets worse, but it also exhibits better adaptation to unobserved test dataset, which indicate that although the model is less sensitive and accurate when identifying details, it has successfully prevented overfitting as depicted in Fig~\ref{fig:contours_l}. The 2 \texttimes{} 2 confusion matrices for the three models
 trained with $l=\{0.01,0.1,1\}$ are show in tables \ref{tab:conf_l_001},
 \ref{tab:conf_l_01} and \ref{tab:conf_l_1}. After analysing these
-matrices, we can say that... When we compare these results to those
-obtained using the original inputs we conclude that...
+matrices, we can say that although $l=0.01$ and $l=1$ settings produce good classification results for one of the categories, it is $l=0.1$ that gives the most balanced confusion matrix, where the error probability of each category is approximately the same value $0.05$. When we compare these results to those
+obtained using the original inputs we conclude that all three models produce better classification results than that of the initial model. Hence, non-linear expansion of features like RBF could significantly boost the performance of linear classifier regardless of RBF settings. Combining with decision boundary contours displayed in Fig~\ref{fig:contours_l}, it is then concluded that non-linear feature expansion is a useful technique when classifying datasets with complex features.
 
 \begin{table}
 \centering{}%
@@ -220,7 +214,7 @@ obtained using the original inputs we conclude that...
 \begin{tabular}{c|c}
 \textbf{Avg. Train ll} & \textbf{Avg. Test ll}\tabularnewline
 \hline 
-- & -\tabularnewline
+$-0.013$ & $-0.664$\tabularnewline
 \hline 
 \end{tabular}\caption{Results for $l=0.01$\label{tab:avg_ll_l_001}}
 \par\end{center}%
@@ -230,7 +224,7 @@ obtained using the original inputs we conclude that...
 \begin{tabular}{c|c}
 \textbf{Avg. Train ll} & \textbf{Avg. Test ll}\tabularnewline
 \hline 
-- & -\tabularnewline
+$-0.036$ & $-0.463$\tabularnewline
 \hline 
 \end{tabular}\caption{Results for $l=0.1$\label{tab:avg_ll_l_01}}
 \par\end{center}%
@@ -240,7 +234,7 @@ obtained using the original inputs we conclude that...
 \begin{tabular}{c|c}
 \textbf{Avg. Train ll} & \textbf{Avg. Test ll}\tabularnewline
 \hline 
-- & -\tabularnewline
+$-0.244$ & $-0.233$\tabularnewline
 \hline 
 \end{tabular}\caption{Results for $l=1$\label{tab:avg_ll_l_1}}
 \par\end{center}%
@@ -255,9 +249,9 @@ obtained using the original inputs we conclude that...
  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$\hat{y}$} & \tabularnewline
  &  & 0 & 1\tabularnewline
 \cline{2-4} 
-$y$ & 0 & - & -\tabularnewline
+$y$ & 0 & $0.996$ & $0.004$\tabularnewline
 \cline{2-4} 
- & 1 & - & -\tabularnewline
+ & 1 & $0.174$ & $0.826$\tabularnewline
 \cline{2-4} 
 \end{tabular} 
 \par\end{center}
@@ -270,9 +264,9 @@ $y$ & 0 & - & -\tabularnewline
  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$\hat{y}$} & \tabularnewline
  &  & 0 & 1\tabularnewline
 \cline{2-4} 
-$y$ & 0 & - & -\tabularnewline
+$y$ & 0 & $0.945$ & $0.055$\tabularnewline
 \cline{2-4} 
- & 1 & - & -\tabularnewline
+ & 1 & $0.049$ & $0.951$\tabularnewline
 \cline{2-4} 
 \end{tabular} 
 \par\end{center}
@@ -285,9 +279,9 @@ $y$ & 0 & - & -\tabularnewline
  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$\hat{y}$} & \tabularnewline
  &  & 0 & 1\tabularnewline
 \cline{2-4} 
-$y$ & 0 & - & -\tabularnewline
+$y$ & 0 & $0.887$ & $0.113$\tabularnewline
 \cline{2-4} 
- & 1 & - & -\tabularnewline
+ & 1 & $0.079$ & $0.921$\tabularnewline
 \cline{2-4} 
 \end{tabular} 
 \par\end{center}
@@ -298,9 +292,7 @@ $y$ & 0 & - & -\tabularnewline
 
 
 \section{Conclusions}
-\begin{enumerate}
-\item Draw together the most important results and their consequences.
-\item List any reservations or limitations.
-\end{enumerate}
+In this lab exercise, the logistic regression model is explored as a method for binary data classification. It has been observed that although simple implementation of the linear model fails to accurately capture the complexity of the dataset used, pre-processing the dataset by RBF feature expansion is generally helpful in improving the probability of error.
+It should also be noted how a larger RBF length scale $l$ will positively affect the model by preventing overfitting at the cost of classification precision. However, this conclusion is yet to be complete as more non-linear filtering methods should be investigated and compared to the optimal performance. The dataset used in this exercise is also relatively small, so verbatim implementation for larger datasets could also be a concern subject to future explorations.
 
 \end{document}
