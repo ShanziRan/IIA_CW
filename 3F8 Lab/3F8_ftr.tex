@@ -5,9 +5,11 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{geometry}
+\usepackage{amsmath}
 \geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=2.5cm,rmargin=2.5cm}
 \usepackage{textcomp}
 \usepackage{graphicx}
+\graphicspath{{figures_ftr/}}
 
 \makeatletter
 
@@ -45,11 +47,58 @@ done), key results and conclusions (the main outcomes).
 \end{enumerate}
 
 \section{Exercise a)}
+The normalisation of posterior probabilities is straightforward for conjugate Gaussian pairs, where the model evidence $Z=p(y|X)=\int p(y|X, \beta)p(\beta)d\beta$ can be directly calculated.
+However, non-conjugate distributions pose a significant challenge as the posterior shape is not predefined. 
+Laplace approximation resolves this issue by fitting a Gaussian $q(\beta)$ at the posterior's local maximum, efficiently approximating the model evidence Z needed for Bayesian logistic regression.
 
-{[} Describe how the Laplace approximation works in general and how
-to apply it to the Logistic classifier. Provide a justification of
-each step. {]}
+\subsection{Bayesian logistic regression}
+The posterior distribution of model weights $\beta$ given the data $y$ and $X$ is defined by Bayes' Theorem as:
+\begin{equation*}
+    p(\beta|y, X) = \frac{p(y|X, \beta)p(\beta)}{p(y|X)}
+\end{equation*}
+where $p(y|X, \beta)$ is the likelihood, $p(\beta)$ is the prior distribution, and $p(y|X)$ is the model evidence or marginal likelihood.
+For model simplicity, the prior is assumed to be Gaussian with zero mean and variance $\sigma_0^2$, and the likelihood is chosen as Bernoulli with the logistic sigmoid function $\sigma(\beta^T\phi)$.
+Denoting $\mathbf{S}_0=\sigma_0^2\mathbf{I}$, the Gaussian prior is formalised as $p(\beta)=\mathcal{N}(\beta|0, \mathbf{S}_0)$ to unify matrix shape and expressions.
 
+\subsection{Laplace approximation of the posterior distribution $p(\beta|y, X)$}
+The expression of the Laplace approximation $q(\beta)$ can be found using the truncated Taylor expansion. Around the mode $\beta_0$ where $\frac{df(\beta)}{d\beta}\Big|_{\beta=\beta_0}=0$, monoticity of the logarithm function gives $\nabla \log f(\beta)=0$, hence:
+\begin{equation*}
+    \log f(\beta) \simeq \log f(\beta_0) - \frac{1}{2} \mathbf{A} (\beta - \beta_0)^2, \quad \mathbf{A}=-\nabla^2\log f(\beta)\big|_{\beta=\beta_0}
+\end{equation*}
+
+Restoring to exponential form yields a Gaussian distribution centered at $\beta_0$, which is identified using Maximum A Posteriori (MAP) estimation. With $\beta_0 = \beta_{MAP}$, the covariance of this Gaussian is defined by the Hessian matrix $\mathbf{S}_N^{-1}=-\nabla^2 \log f(\mathbf{\beta})\big|_{\mathbf{\beta}=\mathbf{\beta}_{MAP}}$. Standard Gaussian normalization method is then applied to yield the posterior approximation:
+\begin{equation}\label{posterior_approximation}
+    p(\beta|y, X) \approx q(\beta) = \mathcal{N}(\mathbf{\beta}|\mathbf{\beta}_0, \mathbf{S}_N^{-1}) = \frac{1}{(2\pi)^{\frac{N}{2}} \det \mathbf{S}_N^{-\frac{1}{2}}} \exp\{\frac{1}{2} (\beta - \beta_{MAP})^T \mathbf{S}_N^{-1}(\beta - \beta_{MAP})\}.
+\end{equation}
+Using this expression, the Hessian matrix can be simplified as:
+\begin{equation}
+    \mathbf{S}_N = -\nabla^2 \log p(\beta|y, X) = \mathbf{S}_0 + \sum_{n=1}^{N} \sigma(\beta^Tx_n)(1-\sigma(\beta^T x_n))x_n x_n^T
+\end{equation}
+
+\subsection{Approximated log model evidence}
+Using the approximated posterior distribution, the log model evidence can then be calculated as:
+\begin{align*}
+    \log p(y|X) &= \log \int p(y|X, \beta)p(\beta)d\beta \\
+    &\approx \log p(y|X, \beta_{MAP}) + \log p(\beta_{MAP})- \frac{1}{2} \log |\mathbf{S}_N^{-1}| + \frac{N}{2} \log 2\pi
+\end{align*}
+which is a combination of the log prior, log likelihood, and the negative log of the determinant of the inverse covariance matrix for the posterior.
+
+\subsection{Approximated predictive distribution}
+For the binary classification problem concerned in this exercise, the predictive distribution is then obtained by marginilising the approximated posterior probability obtained in Equation~\ref{posterior_approximation}. For category $\mathcal{C}_1$, given a new feature vector $\phi(x)$:
+\begin{equation}\label{predictive distribution}
+    p(\mathcal{C}_1|\phi, y, X) = \int p(\mathcal{C}_1|\phi, \beta)p(\beta|y, X)d\beta 
+    \simeq \int \sigma(\beta^T \phi)q(\beta)d\beta 
+\end{equation}
+
+Simplifying Equation~\ref{predictive distribution} using the sifting property of Dirac delta function:
+\begin{equation*}
+    p(\mathcal{C}_1|\phi, y, X) = \int \sigma(\beta^T\phi)\mathcal{N}(\beta^T\phi|\beta_{MAP}^T\phi, \phi^T \mathbf{S}_N\phi) = \int \sigma(\beta ^T \phi)\mathcal{N}(\mu_{pred},\sigma_{pred}^2)d\beta
+\end{equation*}
+
+so $\mu_{pred}=\beta_{MAP} ^T \phi$, $\sigma_{pred}^2=\phi^T \mathbf{S}_N \phi$. This can be further simplified by approximating the logistic sigmoid with prodit function $\Phi(\lambda x)$ with the scale factor $\lambda ^2 = \pi / 8$:
+\begin{equation}
+    p(\mathcal{C}_1|\phi, y, X) = \sigma(\kappa(\phi^T S_N\phi)\beta^T\phi|\beta_{MAP}^T\phi), \quad \kappa(\sigma ^2) = (1+\pi \sigma^2 / 8)^{-1/2}
+\end{equation}
 \section{Exercise b)}
 
 {[} Describe the new gradient form, the python code and any specific
@@ -67,7 +116,7 @@ describe how the results differ from each other {]}
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.3\paperwidth]{place_holder_figure}\hspace{1cm}\includegraphics[width=0.3\paperwidth]{place_holder_figure}
+% \includegraphics[width=0.3\paperwidth]{place_holder_figure}\hspace{1cm}\includegraphics[width=0.3\paperwidth]{place_holder_figure}
 \par\end{centering}
 \caption{Plots showing data and contour lines for the predictive distribution
 generated by the Laplace approximation (left) and the MAP solution
@@ -152,7 +201,7 @@ and the best hyper-parameter values obtained via grid search {]}
 \end{verbatim}
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.3\paperwidth]{place_holder_figure}
+% \includegraphics[width=0.3\paperwidth]{place_holder_figure}
 \par\end{centering}
 \caption{Heat map plot of the the approximation of the model evidence obtained
 in the grid search.\label{fig:heat_map_plot} }
@@ -167,7 +216,7 @@ How do they compare to the ones obtained in previous exercises? {]}
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.3\paperwidth]{place_holder_figure}
+% \includegraphics[width=0.3\paperwidth]{place_holder_figure}
 \par\end{centering}
 \caption{Visualisation of the contours of the class predictive probabilities
 for Laplace approximation after hyper-parameter tuning by maximising
