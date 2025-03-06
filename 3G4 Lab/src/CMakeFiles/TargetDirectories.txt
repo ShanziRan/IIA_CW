@@ -1,0 +1,3 @@
+/homes/sr2021/3G4/src/CMakeFiles/3g4-lab.dir
+/homes/sr2021/3G4/src/CMakeFiles/edit_cache.dir
+/homes/sr2021/3G4/src/CMakeFiles/rebuild_cache.dir

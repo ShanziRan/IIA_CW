@@ -72,7 +72,7 @@ Restoring to exponential form yields a Gaussian distribution centered at $\beta_
 \end{equation}
 Using this expression, the Hessian matrix can be simplified as:
 \begin{equation}
-    \mathbf{S}_N = -\nabla^2 \log p(\beta|y, X) = \mathbf{S}_0 + \sum_{n=1}^{N} \sigma(\beta^Tx_n)(1-\sigma(\beta^T x_n))x_n x_n^T
+    \mathbf{S}_N^{-1} = -\nabla^2 \log p(\beta|y, X) = \mathbf{S}_0 + \sum_{n=1}^{N} \sigma(\beta^Tx_n)(1-\sigma(\beta^T x_n))x_n x_n^T
 \end{equation}
 
 \subsection{Approximated log model evidence}
@@ -137,7 +137,7 @@ obtained and any findings {]}
 \begin{tabular}{c|c}
 \textbf{Avg. Train ll} & \textbf{Avg. Test ll}\tabularnewline
 \hline 
-- & -\tabularnewline
+$-0.220$ & $-0.293$\tabularnewline
 \hline 
 \end{tabular}\caption{Log-likelihoods for MAP solution.\label{tab:ll_MAP}}
 \par\end{center}%
@@ -147,7 +147,7 @@ obtained and any findings {]}
 \begin{tabular}{c|c}
 \textbf{Avg. Train ll} & \textbf{Avg. Test ll}\tabularnewline
 \hline 
-- & -\tabularnewline
+$-0.260$ & $-0.318$\tabularnewline
 \hline 
 \end{tabular}\caption{Log-likelihoods for Laplace approximation.\label{tab:ll_Laplace}}
 \par\end{center}%
@@ -162,9 +162,9 @@ obtained and any findings {]}
  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$\hat{y}$} & \tabularnewline
  &  & 0 & 1\tabularnewline
 \cline{2-4} 
-$y$ & 0 & - & -\tabularnewline
+$y$ & 0 & $0.949$ & $0.051$\tabularnewline
 \cline{2-4} 
- & 1 & - & -\tabularnewline
+ & 1 & $0.059$ & $0.941$\tabularnewline
 \cline{2-4} 
 \end{tabular} 
 \par\end{center}
@@ -177,9 +177,9 @@ $y$ & 0 & - & -\tabularnewline
  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$\hat{y}$} & \tabularnewline
  &  & 0 & 1\tabularnewline
 \cline{2-4} 
-$y$ & 0 & - & -\tabularnewline
+$y$ & 0 & $0.949$ & $0.051$\tabularnewline
 \cline{2-4} 
- & 1 & - & -\tabularnewline
+ & 1 & $0.059$ & $0.941$\tabularnewline
 \cline{2-4} 
 \end{tabular} 
 \par\end{center}
