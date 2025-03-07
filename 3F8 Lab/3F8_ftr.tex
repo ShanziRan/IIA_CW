@@ -29,24 +29,16 @@
 \author{Shanzi (Monica) Ran}
 \maketitle
 \begin{abstract}
-This is the abstract. 
 
-Try for 1-2 sentences on each of: motive (what it\textquoteright s
-about), method (what was
+In this report, full Bayesian binary classification is implemented and tested via Laplace approximation. The predicitive capability of the model is examined alongside comparative metrics of average log-likelihood and confusion matrix, and a comparison with the MAP solution demonstrates the improvement in performance of the probabilistic approach.
+Tuning of hyperparameters is also experimented using grid search method, which produces more flexible decision contours while being stronger against overfitting.
 
-done), key results and conclusions (the main outcomes).
-
-\textbullet{} Don\textquoteright t exceed 3 sentences on any one.
-
-\textbullet{} Write this last, when you know what it should say!
 \end{abstract}
 
 \section{Introduction} \label{sec:intro}
-\begin{enumerate}
-\item What is the problem and why is it interesting?
-\item What novel follow-up will the rest of your report present?
-\end{enumerate}
+Binary classification is a fundamental problem in machine learning, where decision boundaries are developed to correctly predict the label of a new data point.Binary classification stands as a cornerstone challenge in machine learning: establishing decision boundaries that accurately predict binary outcomes for new observations. While logistic regression serves as an effective baseline for linearly separable data, its limitations become apparent when confronted with complex, non-linear patterns. Previous exercises have demonstrated that probabilistic approaches offer superior flexibility in generating decision contours for these intricate datasets.
 
+This report examines full Bayesian regression with Laplace approximation as an alternative to traditional logistic and MAP models. Through comparative analysis of predictive performance and evaluation metrics, it is investigated how this probabilistic framework handles uncertainty. Furthermore, hyperparameter optimization via grid search is also explored to enhance model characteristics and decision boundary adaptability across varying data complexities.
 \section{Exercise a)} \label{sec:exercise_a}
 The normalisation of posterior probabilities is straightforward for conjugate Gaussian pairs, where the model evidence $Z=p(y|X)=\int p(y|X, \beta)p(\beta)d\beta$ can be directly calculated.
 However, non-conjugate distributions pose a significant challenge as the posterior shape is not predefined. 

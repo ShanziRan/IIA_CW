@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.26)  7 MAR 2025 23:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.26)  7 MAR 2025 23:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -298,57 +298,57 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 30.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 39.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 51.
+(Font)              <10> on input line 43.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 51.
+(Font)              <7> on input line 43.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 51.
+(Font)              <5> on input line 43.
 
 
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 110.
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 102.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 [2]
-Overfull \hbox (4.46748pt too wide) in paragraph at lines 133--133
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 107.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (4.46748pt too wide) in paragraph at lines 125--125
  []        \T1/lmtt/m/n/10 log_prior_grad = - np.dot(np.linalg.inv(S), w) + np.dot(np.linalg.inv(S), m_0)[] 
  []
 
 
-Overfull \hbox (172.467pt too wide) in paragraph at lines 167--167
+
+[3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (172.467pt too wide) in paragraph at lines 159--159
  []        \T1/lmtt/m/n/10 w_map, fmin, _ = fmin_l_bfgs_b(neg_log_posterior, w0, fprime=grad_neg_log_posterior, args=(X_tilde, y, S, m0))[] 
  []
 
 
-
-[3]
-Overfull \hbox (30.7174pt too wide) in paragraph at lines 167--167
+Overfull \hbox (30.7174pt too wide) in paragraph at lines 159--159
  []            \T1/lmtt/m/n/10 return w_map, S_N, -np.inf  # Reject when Hessian is not positive semi-definite[] 
  []
 
 
-Overfull \hbox (20.21744pt too wide) in paragraph at lines 185--185
+Overfull \hbox (20.21744pt too wide) in paragraph at lines 177--177
  []    \T1/lmtt/m/n/10 def bayesian_prediction(X_tilde, w_map, S_N): return logistic(np.dot(X_tilde, w_map))[] 
  []
 
-<figures_ftr/c_laplace.png, id=33, 410.4936pt x 328.8285pt>
+<figures_ftr/c_laplace.png, id=32, 410.4936pt x 328.8285pt>
 File: figures_ftr/c_laplace.png Graphic file (type png)
 <use figures_ftr/c_laplace.png>
-Package pdftex.def Info: figures_ftr/c_laplace.png  used on input line 198.
+Package pdftex.def Info: figures_ftr/c_laplace.png  used on input line 190.
 (pdftex.def)             Requested size: 184.29036pt x 147.62524pt.
-<figures_ftr/c_map.png, id=35, 410.4936pt x 328.8285pt>
+<figures_ftr/c_map.png, id=34, 410.4936pt x 328.8285pt>
 File: figures_ftr/c_map.png Graphic file (type png)
 <use figures_ftr/c_map.png>
-Package pdftex.def Info: figures_ftr/c_map.png  used on input line 198.
+Package pdftex.def Info: figures_ftr/c_map.png  used on input line 190.
 (pdftex.def)             Requested size: 184.29036pt x 147.62524pt.
 
 
@@ -357,11 +357,44 @@ Package pdftex.def Info: figures_ftr/c_map.png  used on input line 198.
 [5 <./figures_ftr/c_laplace.png> <./figures_ftr/c_map.png>]
 
 [6]
-<figures_ftr/wide.png, id=49, 611.4042pt x 516.0078pt>
+<figures_ftr/wide.png, id=47, 611.4042pt x 516.0078pt>
 File: figures_ftr/wide.png Graphic file (type png)
 <use figures_ftr/wide.png>
-Package pdftex.def Info: figures_ftr/wide.png  used on input line 331.
+Package pdftex.def Info: figures_ftr/wide.png  used on input line 323.
 (pdftex.def)             Requested size: 184.29036pt x 155.53578pt.
-<figures_ftr/narrow.png, id=50, 578.8827pt x 516.0078pt>
+<figures_ftr/narrow.png, id=48, 578.8827pt x 516.0078pt>
 File: figures_ftr/narrow.png Graphic file (type png)
-<use figures_ftr/narrow.
+<use figures_ftr/narrow.png>
+Package pdftex.def Info: figures_ftr/narrow.png  used on input line 323.
+(pdftex.def)             Requested size: 184.29036pt x 164.27551pt.
+<figures_ftr/final_pred.png, id=49, 412.6617pt x 328.8285pt>
+File: figures_ftr/final_pred.png Graphic file (type png)
+<use figures_ftr/final_pred.png>
+Package pdftex.def Info: figures_ftr/final_pred.png  used on input line 339.
+(pdftex.def)             Requested size: 307.14749pt x 244.74924pt.
+
+
+[7 <./figures_ftr/wide.png> <./figures_ftr/narrow.png>]
+
+[8 <./figures_ftr/final_pred.png>] (./3F8_ftr.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-10-09>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 4305 strings out of 473577
+ 70239 string characters out of 5728189
+ 477510 words of memory out of 5000000
+ 27124 multiletter control sequences out of 15000+600000
+ 637152 words of font info for 76 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,14n,65p,736b,377s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on 3F8_ftr.pdf (8 pages, 778766 bytes).
+PDF statistics:
+ 150 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+
