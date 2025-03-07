@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.26)  4 MAR 2025 19:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.26)  7 MAR 2025 23:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -156,6 +156,13 @@ LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count283
+\float@exts=\toks26
+\float@box=\box54
+\@float@everytoks=\toks27
+\@floatcapt=\box55
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
@@ -173,12 +180,12 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 \Gin@req@width=\dimen160
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/10/20 v24.12 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
-\babel@savecnt=\count283
+\babel@savecnt=\count284
 \U@D=\dimen161
 \l@unhyphenated=\language89
  (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count284
+\bbl@dirlevel=\count285
  (/usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
@@ -192,25 +199,25 @@ Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count285
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count286
+\l__pdf_internal_box=\box56
 ) (./3F8_ftr.aux)
 \openout1 = `3F8_ftr.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -252,88 +259,109 @@ Package geometry Warning: The marginal notes overrun the paper.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
+\scratchcounter=\count287
 \scratchdimen=\dimen162
-\scratchbox=\box55
-\nofMPsegments=\count287
-\nofMParguments=\count288
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count289
+\scratchbox=\box57
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count290
 \MPscratchDim=\dimen163
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
-\everyMPtoPDFconversion=\toks27
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 29.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 30.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 29.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 30.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 29.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 30.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 29.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 30.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 29.
+(Font)              <12> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 29.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 38.
+(Font)              <6> on input line 30.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 39.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 50.
+(Font)              <10> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 50.
+(Font)              <7> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 50.
+(Font)              <5> on input line 51.
 
 
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 106.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 110.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 [2]
+Overfull \hbox (4.46748pt too wide) in paragraph at lines 133--133
+ []        \T1/lmtt/m/n/10 log_prior_grad = - np.dot(np.linalg.inv(S), w) + np.dot(np.linalg.inv(S), m_0)[] 
+ []
+
+
+Overfull \hbox (172.467pt too wide) in paragraph at lines 167--167
+ []        \T1/lmtt/m/n/10 w_map, fmin, _ = fmin_l_bfgs_b(neg_log_posterior, w0, fprime=grad_neg_log_posterior, args=(X_tilde, y, S, m0))[] 
+ []
+
+
 
 [3]
+Overfull \hbox (30.7174pt too wide) in paragraph at lines 167--167
+ []            \T1/lmtt/m/n/10 return w_map, S_N, -np.inf  # Reject when Hessian is not positive semi-definite[] 
+ []
 
-[4] (./3F8_ftr.aux)
- ***********
-LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-10-09>
- ***********
- ) 
-Here is how much of TeX's memory you used:
- 4174 strings out of 473577
- 67769 string characters out of 5728189
- 477020 words of memory out of 5000000
- 27001 multiletter control sequences out of 15000+600000
- 625205 words of font info for 72 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 57i,13n,65p,513b,370s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on 3F8_ftr.pdf (4 pages, 301669 bytes).
-PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+Overfull \hbox (20.21744pt too wide) in paragraph at lines 185--185
+ []    \T1/lmtt/m/n/10 def bayesian_prediction(X_tilde, w_map, S_N): return logistic(np.dot(X_tilde, w_map))[] 
+ []
+
+<figures_ftr/c_laplace.png, id=33, 410.4936pt x 328.8285pt>
+File: figures_ftr/c_laplace.png Graphic file (type png)
+<use figures_ftr/c_laplace.png>
+Package pdftex.def Info: figures_ftr/c_laplace.png  used on input line 198.
+(pdftex.def)             Requested size: 184.29036pt x 147.62524pt.
+<figures_ftr/c_map.png, id=35, 410.4936pt x 328.8285pt>
+File: figures_ftr/c_map.png Graphic file (type png)
+<use figures_ftr/c_map.png>
+Package pdftex.def Info: figures_ftr/c_map.png  used on input line 198.
+(pdftex.def)             Requested size: 184.29036pt x 147.62524pt.
+
+
+[4]
+
+[5 <./figures_ftr/c_laplace.png> <./figures_ftr/c_map.png>]
+
+[6]
+<figures_ftr/wide.png, id=49, 611.4042pt x 516.0078pt>
+File: figures_ftr/wide.png Graphic file (type png)
+<use figures_ftr/wide.png>
+Package pdftex.def Info: figures_ftr/wide.png  used on input line 331.
+(pdftex.def)             Requested size: 184.29036pt x 155.53578pt.
+<figures_ftr/narrow.png, id=50, 578.8827pt x 516.0078pt>
+File: figures_ftr/narrow.png Graphic file (type png)
+<use figures_ftr/narrow.
